@@ -34,6 +34,7 @@ export default function Home(){
 
 const DivGeral = styled.div`
     height: 100vh;
+    background-color: #B0E0E6;
     display: flex;
     flex-direction: column;
     align-items: center;
