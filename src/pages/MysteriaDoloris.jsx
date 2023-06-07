@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components"
 import lacrimosa from "../assets/doloroso.jpg"
 import Iniciais from "../components/Iniciais";
+import Finais from '../components/Finais';
 import OracaoMisterio from '../components/OracaoMisterio';
 import { DivOracoes } from "../styled/styles";
 
@@ -65,6 +66,7 @@ export default function MysteriaDoloris(){
                 </div>
                 <div onClick={() => mudaEstado(6)}>
                     <h2>Orações Finais</h2>
+                    <Finais estado={estado[6]}/>
                 </div>
             </DivOracoes>
         </DivTudo>

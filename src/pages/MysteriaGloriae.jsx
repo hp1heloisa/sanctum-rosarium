@@ -3,6 +3,7 @@ import styled from "styled-components"
 import ressurreicao from "../assets/ressureciao.jpg"
 import Iniciais from "../components/Iniciais";
 import OracaoMisterio from '../components/OracaoMisterio';
+import Finais from '../components/Finais';
 import { DivOracoes } from "../styled/styles";
 
 export default function MysteriaGloriae(){
@@ -65,6 +66,7 @@ export default function MysteriaGloriae(){
                 </div>
                 <div onClick={() => mudaEstado(6)}>
                     <h2>Orações Finais</h2>
+                    <Finais estado={estado[6]}/>
                 </div>
             </DivOracoes>
         </DivTudo>

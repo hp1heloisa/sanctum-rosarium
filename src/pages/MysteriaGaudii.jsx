@@ -3,6 +3,7 @@ import styled from "styled-components"
 import nascimento from "../assets/nascimento.webp"
 import Iniciais from "../components/Iniciais";
 import OracaoMisterio from '../components/OracaoMisterio';
+import Finais from '../components/Finais';
 import { DivOracoes } from "../styled/styles";
 
 export default function MysteriaGaudii(){
@@ -65,6 +66,7 @@ export default function MysteriaGaudii(){
                 </div>
                 <div onClick={() => mudaEstado(6)}>
                     <h2>Orações Finais</h2>
+                    <Finais estado={estado[6]}/>
                 </div>
             </DivOracoes>
         </DivTudo>
