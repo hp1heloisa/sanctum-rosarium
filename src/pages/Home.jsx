@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import terco from '../assets/terco.jpg';
+import terco from '../assets/rosary.png';
 import nascimento from '../assets/nascimento.webp';
 import ceia from '../assets/ultimaceia.jpg';
 import lacrimosa from '../assets/doloroso.jpg';
@@ -48,12 +48,12 @@ const DivGeral = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
         img{
-            width: 200px;
+            width: 150px;
         }
         h1{
-            font-size: 30px;
+            font-size: 40px;
+            color: white;
         }
     }
 `
