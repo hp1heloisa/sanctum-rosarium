@@ -1,23 +1,21 @@
 import styled from "styled-components"
 
-export default function MiIesu(){
+export default function Gloria() {
     return(
-        <DivFatima>
-            <h1>Orátio Fátimae</h1>
+        <DivGloria>
+            <h1>Glória</h1>
             <div>
-                <p>O mi Iesu,</p>
-                <p>dimítte nobis débita nostra, </p>
-                <p>líbera nos ab igne inférni. </p>
+                <p>Glória Patri, et Fílio, et Spirítui Sancto.</p>
                 <span>
-                    <p>Duc in caelum omnes ánimas, </p>
-                    <p>praesértim illas quae máxime índigent misericórdia tua. </p>
+                    <p>Sicut erat in princípio, et nunc, et semper, et in sáecula saeculórum. </p>
+                    <p>Ámen.</p>
                 </span>
             </div>
-        </DivFatima>
+        </DivGloria>
     )
 }
 
-const DivFatima = styled.div`
+const DivGloria = styled.div`
     display: flex;
     flex-direction: column;
     h1{
