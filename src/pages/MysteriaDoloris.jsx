@@ -77,7 +77,7 @@ export default function MysteriaDoloris(){
                             <h2>Tertium Mysterium Doloris:</h2>
                             <h3>Iesus spinis coronátur</h3>
                         </div>
-                        <ImgMisterio src={terceiro} estado={estado[3]}/>
+                        <ImgMisterio src={terceiro} estado={estado[3]} tam={'vertical'}/>
                         <OracaoMisterio estado={estado[3]} lingua={lingua[3]}/>
                     </Container>
                     <span onClick={() => mudaLingua(3)}>traduzir</span>
@@ -99,7 +99,7 @@ export default function MysteriaDoloris(){
                             <h2>Quintum Mysterium Doloris:</h2>
                             <h3>Iesus in cruce móritur</h3>
                         </div>
-                        <ImgMisterio src={quinto} estado={estado[5]}/>
+                        <ImgMisterio src={quinto} estado={estado[5]} tam={'vertical'}/>
                         <OracaoMisterio estado={estado[5]} lingua={lingua[5]}/>
                     </Container>
                     <span onClick={() => mudaLingua(5)}>traduzir</span>
@@ -161,11 +161,17 @@ const DivTradu = styled.div`
     width: 100%;
     >span{
         display: ${props => props.estado};
+        align-items: start;
+        justify-content: center;
         font-size: 8px;
         position: absolute;
-        top: 5px;
-        right: 5px;
+        top: 0;
+        right: 0;
         text-decoration: underline;
         color: blue;
+        height: 30px;
+        width: 40px;
+        padding-top: 5px;
+        cursor: pointer;
     }
 `

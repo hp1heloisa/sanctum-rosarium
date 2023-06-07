@@ -160,11 +160,17 @@ const DivTradu = styled.div`
     width: 100%;
     >span{
         display: ${props => props.estado};
+        align-items: start;
+        justify-content: center;
         font-size: 8px;
         position: absolute;
-        top: 5px;
-        right: 5px;
+        top: 0;
+        right: 0;
         text-decoration: underline;
         color: blue;
+        height: 30px;
+        width: 40px;
+        padding-top: 5px;
+        cursor: pointer;
     }
 `
