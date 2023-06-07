@@ -41,8 +41,7 @@ const DivGeral = styled.div`
     align-items: center;
     justify-content: center;
     font-family: 'Playball';
-    gap: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 20px;
     >div:nth-child(1){
         display: flex;
