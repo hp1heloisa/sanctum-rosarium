@@ -98,7 +98,7 @@ export default function MysteriaLucis(){
                             <h2>Quintum Mysterium Lucis</h2>
                             <h3>Iesus Eucharístiam instítuir</h3>
                         </div>
-                        <ImgMisterio src={quinto} estado={estado[5]}/>
+                        <ImgMisterio src={quinto} estado={estado[5]} tam={'horizontal'}/>
                         <OracaoMisterio estado={estado[5]} lingua={lingua[5]}/>
                     </Container>
                     <span onClick={() => mudaLingua(5)}>traduzir</span>

@@ -8,7 +8,7 @@ export default function Finais({estado,lingua}){
     if (lingua == 'portugues'){
         return(
             <DIvFinais estado={estado}>
-                <Ladainha />
+                <Ladainha lingua={lingua}/>
                 <SubTum>
                     <p>
                         <span>Sub</span> tuum praesídium confúgimus, 
@@ -18,7 +18,7 @@ export default function Finais({estado,lingua}){
                     </p>
                     <span>Ámen.</span>
                 </SubTum>
-                <Salve /> 
+                <Salve lingua={lingua}/> 
                 <DivOra>
                     <p>V. Rogai por nós, Santa Mão de Deus.</p>
                     <p>R. Para que sejamos dignos das promessas de Cristo.</p>
