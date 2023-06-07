@@ -3,36 +3,68 @@ import Ladainha from './Ladainha';
 import Salve from './Salve';
 import SignumCrucis from "./SignumCrucis";
 
-export default function Finais({estado}){
-    return(
-        <DIvFinais estado={estado}>
-            <Ladainha />
-            <SubTum>
-                <p>
-                    <span>Sub</span> tuum praesídium confúgimus, 
-                    Sancta Dei Génitrix: nostras deprecatiónes ne 
-                    despícias in necessitátibus; sed a perículis cunctis líbera nos semper, 
-                    Virgo gloriósa et benedícta.
-                </p>
-                <span>Ámen.</span>
-            </SubTum>
-            <Salve /> 
-            <DivOra>
-                <p>V. Ora pro nobis, sancta Dei Génitrix,</p>
-                <p>R. Ut digni efficiámur promissiónibus Christi.</p>
-            </DivOra>
-            <Oremus>
-                <p>
-                    <span>Orémus:</span> Grátiam tuam, quáesumus, Dómine, méntibus nostris infúnde:
-                    ut qui, Ángelo nuntiante, Christi Fili tui incarnatiónem cognóvimus; 
-                    per passiónem eius et crucem, ad resurrectiónis glóriam perducámur. 
-                    Per eúndem Christum Dóminum nostrum. 
-                </p>
-                <span>Ámen.</span>
-            </Oremus>
-            <SignumCrucis />
-        </DIvFinais>
-    )
+export default function Finais({estado,lingua}){
+
+    if (lingua == 'portugues'){
+        return(
+            <DIvFinais estado={estado}>
+                <Ladainha />
+                <SubTum>
+                    <p>
+                        <span>Sub</span> tuum praesídium confúgimus, 
+                        Sancta Dei Génitrix: nostras deprecatiónes ne 
+                        despícias in necessitátibus; sed a perículis cunctis líbera nos semper, 
+                        Virgo gloriósa et benedícta.
+                    </p>
+                    <span>Ámen.</span>
+                </SubTum>
+                <Salve /> 
+                <DivOra>
+                    <p>V. Rogai por nós, Santa Mão de Deus.</p>
+                    <p>R. Para que sejamos dignos das promessas de Cristo.</p>
+                </DivOra>
+                <Oremus>
+                    <p>
+                        <span>Oremos:</span> Infundi, Senhor, nós vos pedimos, em nossas almas a vossa graça,
+                        para que nós, que conhecemos pela Anunciação do Anjo a Encarnação de Jesus Cristo, vosso Filho,
+                        cheguemos por sua Paixão e sua Cruz à glória da Ressurreição. Pelo mesmo Jesus Cristo, Senhor Nosso. 
+                    </p>
+                    <span>Amém.</span>
+                </Oremus>
+                <SignumCrucis lingua={lingua}/>
+            </DIvFinais>
+        )
+    } else{
+        return(
+            <DIvFinais estado={estado}>
+                <Ladainha />
+                <SubTum>
+                    <p>
+                        <span>Sub</span> tuum praesídium confúgimus, 
+                        Sancta Dei Génitrix: nostras deprecatiónes ne 
+                        despícias in necessitátibus; sed a perículis cunctis líbera nos semper, 
+                        Virgo gloriósa et benedícta.
+                    </p>
+                    <span>Ámen.</span>
+                </SubTum>
+                <Salve /> 
+                <DivOra>
+                    <p>V. Ora pro nobis, sancta Dei Génitrix,</p>
+                    <p>R. Ut digni efficiámur promissiónibus Christi.</p>
+                </DivOra>
+                <Oremus>
+                    <p>
+                        <span>Orémus:</span> Grátiam tuam, quáesumus, Dómine, méntibus nostris infúnde:
+                        ut qui, Ángelo nuntiante, Christi Fili tui incarnatiónem cognóvimus; 
+                        per passiónem eius et crucem, ad resurrectiónis glóriam perducámur. 
+                        Per eúndem Christum Dóminum nostrum. 
+                    </p>
+                    <span>Ámen.</span>
+                </Oremus>
+                <SignumCrucis/>
+            </DIvFinais>
+        )
+    }
 }
 
 const DIvFinais = styled.div`

@@ -6,14 +6,15 @@ import Maria from "./Maria";
 import MiIesu from "./MiIesu";
 
 
-export default function OracaoMisterio({estado}){
+export default function OracaoMisterio({estado,lingua}){
+
     return(
         <DivMisterio estado={estado}>
-            <PaiNosso />
-            <AveMAria vezes={'(10x)'}/>
-            <Gloria />
-            <Maria />
-            <MiIesu />
+            <PaiNosso lingua={lingua}/>
+            <AveMAria lingua={lingua} vezes={'(10x)'}/>
+            <Gloria lingua={lingua}/>
+            <MiIesu lingua={lingua}/>
+            <Maria lingua={lingua}/>
         </DivMisterio>
     )
 }

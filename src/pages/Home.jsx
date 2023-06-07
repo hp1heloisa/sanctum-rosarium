@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import terco from '../assets/rosary.png';
 import nascimento from '../assets/nascimento.webp';
@@ -7,6 +7,8 @@ import lacrimosa from '../assets/doloroso.jpg';
 import ressureicao from '../assets/ressureciao.jpg';
 
 export default function Home(){
+    const navigate = useNavigate();
+
     return(
         <DivGeral>
             <div>
@@ -17,17 +19,17 @@ export default function Home(){
                 </div>
             </div>
             <DivMisterio>
-                <div>
-                    <Link to={"/gaudii"}>Mysteria Gaudii</Link>
+                <div onClick={() => navigate("/gaudii")}>
+                    <span>Mysteria Gaudii</span>
                 </div>
-                <div>
-                    <Link to={"/lucis"}>Mysteria Lucis</Link>
+                <div onClick={() => navigate("/lucis")}>
+                    <span>Mysteria Lucis</span>
                 </div>
-                <div>
-                    <Link to={"/doloris"}>Mysteria Doloris</Link>
+                <div onClick={() => navigate("/doloris")}>
+                    <span>Mysteria Doloris</span>
                 </div>
-                <div>
-                    <Link to={"/gloriae"}>Mysteria Gloriae</Link>
+                <div onClick={() => navigate("/gloriae")}>
+                    <span>Mysteria Gloriae</span>
                 </div>
             </DivMisterio>
         </DivGeral>
@@ -63,11 +65,10 @@ const DivMisterio = styled.div`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    a{
+    span{
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: none;
         font-size: 25px;
         color: white;
         width: 100%;
@@ -82,6 +83,7 @@ const DivMisterio = styled.div`
         display: flex; 
         align-items: end;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
     }
      >div:nth-child(1){
         background-image: url(${nascimento});
@@ -91,7 +93,7 @@ const DivMisterio = styled.div`
     >div:nth-child(2){
         background-image: url(${ceia});
         background-size: cover;
-        background-position: center top;
+        background-position: center center;
     }
     >div:nth-child(3){
         background-image: url(${lacrimosa});
