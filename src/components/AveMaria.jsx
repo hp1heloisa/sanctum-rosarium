@@ -1,9 +1,10 @@
-import styled from "styled-components"
+import { DivOracaoInd } from "../styled/styles";
 
-export default function AveMAria(){
+
+export default function AveMAria({vezes}){
     return(
-        <DivAve>
-            <h1>Ave Maria</h1>
+        <DivOracaoInd>
+            <h1>Ave Maria {vezes}</h1>
             <div>
                 <p>Ave María, grátia plena, Dóminus tecum;</p>
                 <p>benedícta tu in muliéribus, </p>
@@ -15,27 +16,6 @@ export default function AveMAria(){
                     <p>Ámen.</p>
                 </span>
             </div>
-        </DivAve>
+        </DivOracaoInd>
     )
 }
-
-const DivAve = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-family: 'Playball';
-        font-size: 23px;
-        text-align: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-    p{
-        font-family: 'Lexend Deca';
-        font-size: 15px;
-    }
-    span{
-        font-weight: 600;
-    }
-`

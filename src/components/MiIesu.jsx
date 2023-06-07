@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import { DivOracaoInd } from "../styled/styles";
 
 export default function MiIesu(){
     return(
-        <DivFatima>
+        <DivOracaoInd>
             <h1>Orátio Fátimae</h1>
             <div>
                 <p>O mi Iesu,</p>
@@ -13,27 +13,6 @@ export default function MiIesu(){
                     <p>praesértim illas quae máxime índigent misericórdia tua. </p>
                 </span>
             </div>
-        </DivFatima>
+        </DivOracaoInd>
     )
 }
-
-const DivFatima = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-family: 'Playball';
-        font-size: 23px;
-        text-align: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-    p{
-        font-family: 'Lexend Deca';
-        font-size: 15px;
-    }
-    span{
-        font-weight: 600;
-    }
-`

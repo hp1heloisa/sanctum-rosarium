@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import { DivOracaoInd } from "../styled/styles";
 
 export default function Credo() {
     return(
-        <DivCredo>
+        <DivOracaoInd>
             <h1>Credo</h1>
             <div>
                 <p><span>Credo</span> in Deum Patrem omnipoténtem,</p>
@@ -23,27 +23,6 @@ export default function Credo() {
                 <p><span>vitam</span> aetérnam. </p>
                 <p><span>Ámen.</span></p>
             </div>
-        </DivCredo>
+        </DivOracaoInd>
     )
 }
-
-const DivCredo = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-family: 'Playball';
-        font-size: 23px;
-        text-align: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-    p{
-        font-family: 'Lexend Deca';
-        font-size: 15px;
-    }
-    span{
-        font-weight: 600;
-    }
-`

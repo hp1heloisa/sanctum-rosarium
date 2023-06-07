@@ -2,6 +2,9 @@ import { useState } from "react"
 import styled from "styled-components"
 import ceia from "../assets/ultimaceia.jpg"
 import Iniciais from "../components/Iniciais"
+import OracaoMisterio from '../components/OracaoMisterio';
+import Finais from '../components/Finais';
+import { DivOracoes } from "../styled/styles";
 
 export default function MysteriaLucis(){
     const [estado, setEstado] = useState(['none','none','none','none','none','none','none'])
@@ -14,9 +17,7 @@ export default function MysteriaLucis(){
             novoEstado[i] = 'flex';
         }
         setEstado(novoEstado);
-        console.log(estado)
     }
-
 
     return(
         <DivTudo>
@@ -33,33 +34,39 @@ export default function MysteriaLucis(){
                         <h2>Primum Mysterium Lucis:</h2>
                         <h3>Iesus in Iordáne baptizátur</h3>
                     </div>
+                    <OracaoMisterio estado={estado[1]}/>
                 </div>
                 <div onClick={() => mudaEstado(2)}>
                     <div>
                         <h2>Secundum Mysterium Lucis:</h2>
                         <h3>Iesus apud Canénse Matrimónium se autorevélat</h3>
                     </div>
+                    <OracaoMisterio estado={estado[2]}/>
                 </div>
                 <div onClick={() => mudaEstado(3)}>
                     <div>
                         <h2>Tertium Mysterium Lucis:</h2>
                         <h3>Iesus regnum Dei proclámat et ad conversiónem invítat</h3>
                     </div>
+                    <OracaoMisterio estado={estado[3]}/>
                 </div>
                 <div onClick={() => mudaEstado(4)}>
                     <div>
                         <h2>Quartum Mysterium Lucis</h2>
                         <h3>Iesus in monte transfigurátur</h3>
                     </div>
+                    <OracaoMisterio estado={estado[4]}/>
                 </div>
                 <div onClick={() => mudaEstado(5)}>
                     <div>
                         <h2>Quintum Mysterium Lucis</h2>
                         <h3>Iesus Eucharístiam instítuir</h3>
                     </div>
+                    <OracaoMisterio estado={estado[5]}/>
                 </div>
                 <div onClick={() => mudaEstado(6)}>
                     <h2>Orações Finais</h2>
+                    <Finais estado={estado[6]}/>
                 </div>
             </DivOracoes>
         </DivTudo>
@@ -73,6 +80,7 @@ const DivTudo = styled.div`
     align-items: center;
     gap: 20px;
     background-color: #4682B4;
+    padding-top: 170px;
     >div:nth-child(1){
         background-image: url(${ceia});
         background-size: cover;
@@ -82,6 +90,10 @@ const DivTudo = styled.div`
         display: flex; 
         align-items: end;
         justify-content: center;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        position: fixed;
+        top: 0;
+        left: 0;
         h1{
             color: white;
             font-size: 40px;
@@ -94,32 +106,4 @@ const DivTudo = styled.div`
     }
 `
 
-const DivOracoes = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 10px;
-    font-family: 'Lexend Deca';
-    h2{
-        font-family: 'Playball';
-        font-size: 25px;
-    }
-    h3{
-        font-size: 16px;
-        font-weight: 400;
-    }
-    >div{
-        box-sizing: border-box;
-        width: 300px;
-        background: #FFFFFF;
-        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-        border-radius: 5px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-`
 

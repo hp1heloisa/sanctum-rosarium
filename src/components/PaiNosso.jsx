@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import { DivOracaoInd } from "../styled/styles";
 
 export default function PaiNosso(){
     return(
-        <DivPater>
+        <DivOracaoInd>
             <h1>Pater Noster</h1>
             <div>
                 <p>Pater noster, qui es in caelis,</p>
@@ -17,27 +17,7 @@ export default function PaiNosso(){
                     <p>Ámen.</p>
                 </span>
             </div>
-        </DivPater>
+        </DivOracaoInd>
     )
 }
 
-const DivPater = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-family: 'Playball';
-        font-size: 23px;
-        text-align: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-    p{
-        font-family: 'Lexend Deca';
-        font-size: 15px;
-    }
-    span{
-        font-weight: 600;
-    }
-`

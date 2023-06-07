@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import { DivOracaoInd } from "../styled/styles";
 
 export default function Gloria() {
     return(
-        <DivGloria>
+        <DivOracaoInd>
             <h1>Glória</h1>
             <div>
                 <p>Glória Patri, et Fílio, et Spirítui Sancto.</p>
@@ -11,27 +11,6 @@ export default function Gloria() {
                     <p>Ámen.</p>
                 </span>
             </div>
-        </DivGloria>
+        </DivOracaoInd>
     )
 }
-
-const DivGloria = styled.div`
-    display: flex;
-    flex-direction: column;
-    h1{
-        font-family: 'Playball';
-        font-size: 23px;
-        text-align: center;
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-    }
-    p{
-        font-family: 'Lexend Deca';
-        font-size: 15px;
-    }
-    span{
-        font-weight: 600;
-    }
-`
