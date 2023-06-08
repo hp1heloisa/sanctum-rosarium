@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import terco from '../assets/rosary.png';
 import nascimento from '../assets/nascimento.webp';
@@ -49,11 +49,13 @@ const DivGeral = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
+        margin-bottom: 10px;
         img{
-            width: 150px;
+            width: 130px;
         }
         h1{
-            font-size: 40px;
+            font-size: 45px;
             color: white;
         }
     }
