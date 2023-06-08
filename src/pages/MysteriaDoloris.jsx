@@ -55,7 +55,7 @@ export default function MysteriaDoloris(){
                         <h2>Orações Iniciais</h2>
                         <Iniciais estado={estado[0]} lingua={lingua[0]}/>
                     </Container>
-                    <span onClick={() => mudaLingua(0)}>traduzir</span>
+                    <span onClick={() => mudaLingua(0)}>{(lingua[0]=='portugues') ? 'latim' : 'português'}</span>
                 </DivTradu>
                 {misteriosLatim.map((misterio, i) => {
                     return(
@@ -68,7 +68,7 @@ export default function MysteriaDoloris(){
                                 <ImgMisterio src={imagens[i]} estado={estado[i+1]} tam={i+1}/>
                                 <OracaoMisterio estado={estado[i+1]} lingua={lingua[i+1]}/>
                             </Container>
-                            <span onClick={() => mudaLingua(i+1)}>traduzir</span>
+                            <span onClick={() => mudaLingua(i+1)}>{(lingua[i+1]=='portugues') ? 'latim' : 'português'}</span>
                         </DivTradu>
                     )
                 })}
@@ -77,7 +77,7 @@ export default function MysteriaDoloris(){
                         <h2>Orações Finais</h2>
                         <Finais estado={estado[6]} lingua={lingua[6]}/>
                     </Container>
-                    <span onClick={() => mudaLingua(6)}>traduzir</span>
+                    <span onClick={() => mudaLingua(6)}>{(lingua[6]=='portugues') ? 'latim' : 'português'}</span>
                 </DivTradu>
             </DivOracoes>
         </DivTudo>

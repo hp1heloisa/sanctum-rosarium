@@ -17,7 +17,7 @@ export default function Iniciais({estado, lingua}) {
                 <Credo lingua={lingua}/>
                 <PaiNosso lingua={lingua}/>
                 <DivAngelus>
-                    <p>V. O Anjo do Senho anunciou a Maria.</p>
+                    <p>V. O Anjo do Senhor anunciou a Maria.</p>
                     <p>R. E Ela concebeu do Espírito Santo.</p>
                 </DivAngelus>
                 <AveMAria lingua={lingua}/>

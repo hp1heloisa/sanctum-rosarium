@@ -75,7 +75,7 @@ width: 100%;
     text-decoration: underline;
     color: blue;
     height: 30px;
-    width: 40px;
+    width: 45px;
     padding-top: 5px;
     cursor: pointer;
 }
