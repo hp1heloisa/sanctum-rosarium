@@ -1,4 +1,4 @@
-import { DivOracaoInd } from "../styled/styles";
+import { DivOracaoInd } from "../../styled/styles";
 
 export default function Maria({lingua}){
     if (lingua == 'portugues'){

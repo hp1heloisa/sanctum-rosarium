@@ -15,11 +15,11 @@ export const DivOracaoInd = styled.div`
         flex-direction: column;
     }
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 14px;
     }
     span{
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
     }
 `
@@ -31,7 +31,7 @@ export const DivOracoes = styled.div`
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;
-    font-family: 'Lexend Deca';
+    font-family: 'Nunito';
     width: 100%;
     padding-left: 12.5px;
     padding-right: 12.5px; 
@@ -42,7 +42,7 @@ export const DivOracoes = styled.div`
     }
     h3{
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 600;
         text-align: center;
     }
     
@@ -59,4 +59,24 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 15px;
+`
+
+export const DivTradu = styled.div`
+position: relative;
+width: 100%;
+>span{
+    display: ${props => props.estado};
+    align-items: start;
+    justify-content: center;
+    font-size: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: underline;
+    color: blue;
+    height: 30px;
+    width: 40px;
+    padding-top: 5px;
+    cursor: pointer;
+}
 `

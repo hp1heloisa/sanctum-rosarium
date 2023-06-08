@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import PaiNosso from "./PaiNosso";
-import AveMAria from "./AveMaria";
-import Gloria from "./Gloria";
-import Maria from "./Maria";
-import MiIesu from "./MiIesu";
+import PaiNosso from "./oracoes/PaiNosso";
+import AveMAria from "./oracoes/AveMaria";
+import Gloria from "./oracoes/Gloria";
+import Maria from "./oracoes/Maria";
+import MiIesu from "./oracoes/MiIesu";
 
 
 export default function OracaoMisterio({estado,lingua}){

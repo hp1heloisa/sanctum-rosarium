@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Ladainha from './Ladainha';
-import Salve from './Salve';
-import SignumCrucis from "./SignumCrucis";
+import Ladainha from './oracoes/Ladainha';
+import Salve from './oracoes/Salve';
+import SignumCrucis from "./oracoes/SignumCrucis";
 
 export default function Finais({estado,lingua}){
 
@@ -11,12 +11,11 @@ export default function Finais({estado,lingua}){
                 <Ladainha lingua={lingua}/>
                 <SubTum>
                     <p>
-                        <span>Sub</span> tuum praesídium confúgimus, 
-                        Sancta Dei Génitrix: nostras deprecatiónes ne 
-                        despícias in necessitátibus; sed a perículis cunctis líbera nos semper, 
-                        Virgo gloriósa et benedícta.
+                        <span>À</span> vossa proteção recorremos, santa Mãe de Deus; não desprezeis as 
+                        nossas súplicas em nossas necessidades; mas livrai-nos sempre de todos os perigos,
+                        ó Virgem gloriosa e bendita.
                     </p>
-                    <span>Ámen.</span>
+                    <span>Ámem.</span>
                 </SubTum>
                 <Salve lingua={lingua}/> 
                 <DivOra>
@@ -80,11 +79,11 @@ const SubTum = styled.div`
     flex-direction: column;
     width: 100%;
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 14px;
     }
     span{
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
     }
 `
@@ -95,12 +94,12 @@ const DivOra = styled.div`
     flex-direction: column;
     align-items: start;
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 14px;
 
     }
     >p:nth-child(2){
-        font-weight: 600;
+        font-weight: 700;
     }
 `
 
@@ -109,14 +108,14 @@ const Oremus = styled.div`
     flex-direction: column;
     width: 100%;
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 14px;
         span{
-            font-style: 'italic';
+            font-style: 'Italic';
         }
     }
     span{
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
     }
 `

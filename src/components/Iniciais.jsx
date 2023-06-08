@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import styled from "styled-components"
-import AveMAria from "./AveMaria"
-import Credo from "./Credo"
-import Gloria from "./Gloria"
-import Maria from "./Maria"
-import MiIesu from "./MiIesu"
-import PaiNosso from "./PaiNosso"
-import PerSignumCrucis from "./PerSignumCrucis"
+import AveMAria from "./oracoes/AveMaria"
+import Credo from "./oracoes/Credo"
+import Gloria from "./oracoes/Gloria"
+import Maria from "./oracoes/Maria"
+import MiIesu from "./oracoes/MiIesu"
+import PaiNosso from "./oracoes/PaiNosso"
+import PerSignumCrucis from "./oracoes/PerSignumCrucis"
 
 export default function Iniciais({estado, lingua}) {
 
@@ -90,11 +90,11 @@ const DivAngelus = styled.div`
     flex-direction: column;
     align-items: start;
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 15px;
     }
     >p:nth-child(2){
-        font-weight: 600;
+        font-weight: 700;
     }
 `
 const DivAve = styled.div`
@@ -107,7 +107,7 @@ const DivAve = styled.div`
         font-size: 23px;
     }
     p{
-        font-family: 'Lexend Deca';
+        font-family: 'Nunito';
         font-size: 15px;
     }
 `

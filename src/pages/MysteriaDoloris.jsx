@@ -4,17 +4,25 @@ import lacrimosa from "../assets/doloroso.jpg"
 import Iniciais from "../components/Iniciais";
 import Finais from '../components/Finais';
 import OracaoMisterio from '../components/OracaoMisterio';
-import { DivOracoes, Container } from "../styled/styles";
+import { DivOracoes, Container, DivTradu } from "../styled/styles";
 import primeiro from '../assets/primeirodoloroso.jpg';
 import segundo from '../assets/segundodoloroso.jpg';
 import terceiro from '../assets/terceirodoloroso.jpg';
 import quarto from '../assets/quartodoloroso.jpg';
 import quinto from '../assets/quintodoloroso.jpg';
 
-
 export default function MysteriaDoloris(){
     const [estado, setEstado] = useState(['none','none','none','none','none','none','none']);
     const [lingua, setLingua] = useState(['latim','latim','latim','latim','latim','latim','latim']);
+    const imagens = [primeiro, segundo, terceiro, quarto, quinto];
+    const numeroMisterio = ['Primum Mysterium Doloris:','Secundum Mysterium Doloris:','Tertium Mysterium Doloris:',
+                            'Quartum Mysterium Doloris:','Quintum Mysterium Doloris:'];
+    const numeroMisterioPort = ['Primeiro Mistério Doloroso:', 'Segundo Mistério Doloroso:', 'Terceiro Mistério Doloroso:',
+                                'Quarto Mistério Doloroso:', 'Quinto Mistério Doloroso:']
+    const misteriosPortugues = ['A Agonia de Jesus no Jardim das Oliveiras', 'A Flagelação do Senhor', 'A Coroação de Espinhos',
+                                'Jesus a caminho do Calvário e o encontro com sua Mãe', 'A Crucifixão e Morte de Jesus'];
+    const misteriosLatim = ['Iesus in horto Gethsémani orat','Iesus flagéllis caeditur','Iesus spinis coronátur',
+                            'Iesus cruce oneratus Cálvarie locum adit','Iesus in cruce móritur'];
 
     function mudaEstado(i){
         const novoEstado = [...estado];
@@ -49,61 +57,21 @@ export default function MysteriaDoloris(){
                     </Container>
                     <span onClick={() => mudaLingua(0)}>traduzir</span>
                 </DivTradu>
-                <DivTradu estado={estado[1]}>
-                    <Container onClick={() => mudaEstado(1)}>
-                        <div>
-                            <h2>Primum Mysterium Doloris:</h2>
-                            <h3>Iesus in horto Gethsémani orat</h3>
-                        </div>
-                        <ImgMisterio src={primeiro} estado={estado[1]}/>
-                        <OracaoMisterio estado={estado[1]} lingua={lingua[1]}/>
-                    </Container>
-                    <span onClick={() => mudaLingua(1)}>traduzir</span>
-                </DivTradu>
-                <DivTradu estado={estado[2]}>
-                    <Container onClick={() => mudaEstado(2)}>
-                        <div>
-                            <h2>Secundum Mysterium Doloris:</h2>
-                            <h3>Iesus flagéllis caeditur</h3>
-                        </div>
-                        <ImgMisterio src={segundo} estado={estado[2]}/>
-                        <OracaoMisterio estado={estado[2]} lingua={lingua[2]}/>
-                    </Container>
-                    <span onClick={() => mudaLingua(2)}>traduzir</span>
-                </DivTradu>
-                <DivTradu estado={estado[3]}>
-                    <Container onClick={() => mudaEstado(3)}>
-                        <div>
-                            <h2>Tertium Mysterium Doloris:</h2>
-                            <h3>Iesus spinis coronátur</h3>
-                        </div>
-                        <ImgMisterio src={terceiro} estado={estado[3]} tam={'vertical'}/>
-                        <OracaoMisterio estado={estado[3]} lingua={lingua[3]}/>
-                    </Container>
-                    <span onClick={() => mudaLingua(3)}>traduzir</span>
-                </DivTradu>
-                <DivTradu estado={estado[4]}>
-                    <Container onClick={() => mudaEstado(4)}>
-                        <div>
-                            <h2>Quartum Mysterium Doloris:</h2>
-                            <h3>Iesus cruce oneratus Cálvarie locum adit</h3>
-                        </div>
-                        <ImgMisterio src={quarto} estado={estado[4]}/>
-                        <OracaoMisterio estado={estado[4]} lingua={lingua[4]}/>
-                    </Container>
-                    <span onClick={() => mudaLingua(4)}>traduzir</span>
-                </DivTradu>
-                <DivTradu estado={estado[5]}>
-                    <Container onClick={() => mudaEstado(5)}>
-                        <div>
-                            <h2>Quintum Mysterium Doloris:</h2>
-                            <h3>Iesus in cruce móritur</h3>
-                        </div>
-                        <ImgMisterio src={quinto} estado={estado[5]} tam={'vertical'}/>
-                        <OracaoMisterio estado={estado[5]} lingua={lingua[5]}/>
-                    </Container>
-                    <span onClick={() => mudaLingua(5)}>traduzir</span>
-                </DivTradu>
+                {misteriosLatim.map((misterio, i) => {
+                    return(
+                        <DivTradu key={i+1} estado={estado[i+1]}>
+                            <Container onClick={() => mudaEstado(i+1)}>
+                                <div>
+                                    <h2>{(lingua[i+1]=='portugues') ? numeroMisterioPort[i] : numeroMisterio[i]}</h2>
+                                    <h3>{(lingua[i+1]=='portugues') ? misteriosPortugues[i] : misterio}</h3>
+                                </div>
+                                <ImgMisterio src={imagens[i]} estado={estado[i+1]} tam={i+1}/>
+                                <OracaoMisterio estado={estado[i+1]} lingua={lingua[i+1]}/>
+                            </Container>
+                            <span onClick={() => mudaLingua(i+1)}>traduzir</span>
+                        </DivTradu>
+                    )
+                })}
                 <DivTradu estado={estado[6]}>
                     <Container onClick={() => mudaEstado(6)}>
                         <h2>Orações Finais</h2>
@@ -152,26 +120,6 @@ const DivTudo = styled.div`
 
 const ImgMisterio = styled.img`
     display: ${props => props.estado};
-    width: ${props => (props.tam == 'vertical') ? '50%' : '100%'};
+    width: ${props => (props.tam == 3 || props.tam == 5) ? '50%' : '100%'};
     border-radius: 5px;
-`
-
-const DivTradu = styled.div`
-    position: relative;
-    width: 100%;
-    >span{
-        display: ${props => props.estado};
-        align-items: start;
-        justify-content: center;
-        font-size: 8px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-decoration: underline;
-        color: blue;
-        height: 30px;
-        width: 40px;
-        padding-top: 5px;
-        cursor: pointer;
-    }
 `

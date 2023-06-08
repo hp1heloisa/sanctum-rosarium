@@ -1,4 +1,4 @@
-import { DivOracaoInd } from "../styled/styles";
+import { DivOracaoInd } from "../../styled/styles";
 
 export default function Gloria({lingua}) {
     if (lingua == 'portugues'){

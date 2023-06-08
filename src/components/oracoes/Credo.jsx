@@ -1,4 +1,4 @@
-import { DivOracaoInd } from "../styled/styles";
+import { DivOracaoInd } from "../../styled/styles";
 
 export default function Credo({lingua}) {
     if (lingua == 'portugues'){
