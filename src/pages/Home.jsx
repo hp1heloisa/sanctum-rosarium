@@ -86,6 +86,9 @@ const DivMisterio = styled.div`
         align-items: end;
         box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
         cursor: pointer;
+        :hover {
+            box-shadow: 1px 5px 10px grey;
+        }
     }
      >div:nth-child(1){
         background-image: url(${nascimento});

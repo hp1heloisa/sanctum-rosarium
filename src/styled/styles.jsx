@@ -59,6 +59,7 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        cursor: pointer;
 `
 
 export const DivTradu = styled.div`
@@ -72,11 +73,13 @@ width: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    text-decoration: underline;
     color: blue;
     height: 30px;
     width: 45px;
     padding-top: 5px;
     cursor: pointer;
+    :hover{
+        text-decoration: underline;
+    }
 }
 `
