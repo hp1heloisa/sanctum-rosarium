@@ -60,6 +60,9 @@ export const Container = styled.div`
         align-items: center;
         gap: 15px;
         cursor: pointer;
+        :hover {
+            box-shadow: 1px 5px 5px grey;
+        }
 `
 
 export const DivTradu = styled.div`
